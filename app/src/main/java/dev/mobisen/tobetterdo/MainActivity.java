@@ -62,9 +62,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClicked(int position) {
                 // Create a new activity
                 Intent i = new Intent(MainActivity.this, EditActivity.class);
+
                 // Pass the data being edited
                 i.putExtra(KEY_ITEM_TEXT, items.get(position));
                 i.putExtra(KEY_ITEM_POSITION, position);
+
                 // Display the activity
                 startActivityForResult(i, EDIT_TEXT_CODE);
             }
@@ -78,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String todoItem = etItem.getText().toString();
+
                 // Add new item to the model
                 items.add(todoItem);
+
                 // Notify the adapter an item is inserted
                 itemsAdapter.notifyItemInserted(items.size() - 1);
                 etItem.setText("");
@@ -94,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == EDIT_TEXT_CODE) {
+
             // Retreive the updated text value
             String itemText = data.getStringExtra(KEY_ITEM_TEXT);
 
