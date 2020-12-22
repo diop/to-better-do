@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ public class EditActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
 
         getSupportActionBar().setTitle("Edit item");
-
+        Log.e("EditActivity", getIntent().getStringExtra(MainActivity.KEY_ITEM_TEXT));
         etItem.setText(getIntent().getStringExtra(MainActivity.KEY_ITEM_TEXT));
 
         // Clicked when user is done editing

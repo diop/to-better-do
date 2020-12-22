@@ -8,7 +8,7 @@
     tools:context=".EditActivity">
 
     <EditText
-        android:id="@+id/edItem"
+        android:id="@+id/etItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -22,7 +22,7 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edItem"
+        android:layout_below="@+id/etItem"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="0dp"

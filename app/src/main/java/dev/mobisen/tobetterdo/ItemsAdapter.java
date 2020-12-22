@@ -72,6 +72,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
             tvItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // Notify the listener which position was clicked for edit
                     clickListener.onItemClicked(getAdapterPosition());
                 }
             });
